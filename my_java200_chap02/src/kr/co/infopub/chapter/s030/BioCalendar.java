@@ -16,6 +16,7 @@ public class BioCalendar {
 		BioCalendar bio = new BioCalendar();
 		double phyval = bio.getBioRhythm( days, PHYSICAL, 100);
 		System.out.printf("나의 신체 지수 %1$.2f입니다. \n", phyval);
+		System.out.printf("나의 신체 지수 %f입니다. \n", phyval);
 		
 
 	}

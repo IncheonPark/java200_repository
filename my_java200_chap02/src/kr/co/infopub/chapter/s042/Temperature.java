@@ -1,0 +1,16 @@
+// Á¤¼ö/½Ç¼ö º¯È¯À¸·Î ¼·¾¾¸¦ È­¾¾·Î ¹Ù²Ù±â
+
+package kr.co.infopub.chapter.s042;
+
+public class Temperature {
+	
+	public static void main(String[] args) {
+		for (int i = 0; i < 101; i++) {
+			
+			double fahrenheit = 9.0/5 * i + 32; //for ºí·Ï º¯¼ö
+			System.out.printf("¼·¾¾ %dµµ = È­¾¾ %.2f \n", i, fahrenheit);
+			
+		}
+	}
+
+}

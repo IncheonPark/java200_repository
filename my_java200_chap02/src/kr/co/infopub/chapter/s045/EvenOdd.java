@@ -1,0 +1,24 @@
+// for를 이용하여 1이 될 떄까지 나누고 곱하기
+
+package kr.co.infopub.chapter.s045;
+
+public class EvenOdd {
+	
+	public static void showOddnEvenf(int n) {
+		int temp = n;
+		for(; temp !=1; ) { //초기값과 증감식을 빼면 while처럼 사용 가능하다.
+			if(temp%2 ==1) {
+				temp = temp *3 +1;
+			}else {
+				temp /= 2;
+			}
+			System.out.print("[" + temp + "]");
+		}
+		System.out.println("\n----------------");
+	}
+	public static void main(String[] args) {
+		showOddnEvenf(1);
+		showOddnEvenf(122);
+	}
+
+}

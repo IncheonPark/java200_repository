@@ -35,7 +35,7 @@ public class RestDay {
 		System.out.println("아메리카 시카고 시간 : "+sdf.format(date));
 		
 		
-		Calendar calNY = Calendar.getInstance(); //매개변수가 왜 인식이 안되지? 알고보니 인식이 되는데 나중에 date에서 못씀
+		Calendar calNY = Calendar.getInstance(); //매개변수가 왜 인식이 안되지? -> 알고보니 인식은 되는데 getTime()쓸 때 date에서 못씀
 		//calNY.setTimeZone(tzNY);
 		String name = calNY.getTimeZone().getDisplayName();
 		
@@ -62,14 +62,14 @@ public class RestDay {
 	
 	public static String toYMD(Calendar cal, TimeZone tz) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		sdf.setTimeZone(tz);
-		return sdf.format(cal.getTime()); //수정해야함 타임존 반영못함
+		sdf.setTimeZone(tz); //DateFormat객체에 타임존을 세팅했다.
+		return sdf.format(cal.getTime());
 	}
 	
 	public static String toYMD2(Calendar cal, TimeZone tz) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		sdf.setTimeZone(tz);
-		return sdf.format(cal.getTime()); //수정해야함 타임존 반영못함
+		sdf.setTimeZone(tz); //위와 같다.
+		return sdf.format(cal.getTime());
 	}
 	
 	public static String goGo(String str, int day, TimeZone tz) {
@@ -78,8 +78,8 @@ public class RestDay {
 		cal.add(Calendar.DAY_OF_YEAR, day);
 		//캘린더를 문자열로
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		sdf.setTimeZone(tz);
-		return sdf.format(cal.getTime()); //수정해야함 타임존 반영못함
+		sdf.setTimeZone(tz); //위와 같다.
+		return sdf.format(cal.getTime()); 
 	}
 
 }

@@ -12,6 +12,8 @@ public class BillboardArrayMain {
 		
 		ArrayList<Billboard> bills = new ArrayList<>();
 		
+		System.out.println(bills.size());
+		
 	}
 
 }

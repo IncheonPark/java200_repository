@@ -14,6 +14,7 @@ public class BillboardArrayMain {
 		
 		System.out.println(bills.size());
 		
+		
 	}
 
 }
